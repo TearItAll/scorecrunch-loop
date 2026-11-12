@@ -1,0 +1,13 @@
+[package]
+name = "scorecrunch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+polars = { version = "0.55", default-features = false, features = ["lazy", "csv", "strings", "round_series", "fmt", "dtype-date"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
